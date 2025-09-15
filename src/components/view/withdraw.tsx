@@ -47,6 +47,8 @@ export const Withdraw: FC = ({ }) => {
 
   return (
     <div className="md:hero mx-auto w-full p-4">
+
+      <div>Use <a>Backpack wallet</a> and connect</div>
       {!connected && <div className="text-center font-bold mt-[5%] text-xl">Please, connect your wallet!</div>}
 
       {connected && !isFetched && <Loader text="Loading positions..." />}

@@ -23,13 +23,17 @@ export async function getPersonnalPositionInfo(mint: PublicKey, connection: Conn
 
     const PersonnalPositionInfo = {
         address: personal,
-       // @ts-ignore
+       // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
         poolID: new PublicKey(decoded!.pool_id),
-        // @ts-ignore
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
         tickLowerIndex: decoded!.tick_lower_index,
-        // @ts-ignore
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
         tickUpperIndex: decoded!.tick_upper_index,
-        // @ts-ignore
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
         liquidity: decoded!.liquidity
     }
 
