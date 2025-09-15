@@ -26,15 +26,15 @@ export async function getPoolInfo(pool: PublicKey, connection: Connection) {
     const mintDecoded = borsh.deserialize(mintSchema, data!.slice(8 + 1 + 32 + 32, 8 + 1 + 32 + 32 + 4 * 32));
 
     const PoolInfo = {
-        // @ts-expect-error
+        // @ts-ignore
         tickSpacing: tickDecoded!.tick_spacing,
-        // @ts-expect-error
+        // @ts-ignore
         mint0: new PublicKey(mintDecoded!.token_mint_0),
-        // @ts-expect-error
+        // @ts-ignore
         mint1: new PublicKey(mintDecoded!.token_mint_1),
-        // @ts-expect-error
+        // @ts-ignore
         vaultTokenAccount0: new PublicKey(mintDecoded!.token_vault_0),
-       // @ts-expect-error
+       // @ts-ignore
         vaultTokenAccount1: new PublicKey(mintDecoded!.token_vault_1),
     }
 
