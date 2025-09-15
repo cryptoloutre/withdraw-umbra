@@ -1,28 +1,26 @@
 # withdraw-umbra
 
-This is a Next.js app containing:
-
-- Tailwind CSS setup for styling
-- Useful wallet UI elements setup using [@solana/web3.js](https://www.npmjs.com/package/@solana/web3.js)
+Frontend to withdraw liquidity from [Umbra Finance](https://x.com/UmbraFi) since their website is dead.
 
 ## Getting Started
 
 ### Installation
 
-#### Download the template
+#### Clone the repo
 
-```shell
-pnpm create solana-dapp@latest -t gh:solana-foundation/templates/web3js/withdraw-umbra
+```bash
+git clone https://github.com/cryptoloutre/withdraw-umbra.git
+cd withdraw-umbra
 ```
 
 #### Install Dependencies
 
-```shell
-pnpm install
+```bash
+npm install
 ```
 
 #### Start the web app
 
-```shell
-pnpm dev
+```bash
+npm run dev
 ```
