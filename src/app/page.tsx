@@ -1,5 +1,5 @@
-import { DashboardFeature } from '@/components/dashboard/dashboard-feature'
+import { Withdraw } from '@/components/view/withdraw'
 
 export default function Home() {
-  return <DashboardFeature />
+  return <Withdraw />
 }

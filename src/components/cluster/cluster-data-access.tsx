@@ -24,16 +24,10 @@ export enum ClusterNetwork {
 // To use the mainnet-beta cluster, provide a custom endpoint
 export const defaultClusters: SolanaCluster[] = [
   {
-    name: 'devnet',
-    endpoint: clusterApiUrl('devnet'),
-    network: ClusterNetwork.Devnet,
-  },
-  { name: 'local', endpoint: 'http://localhost:8899' },
-  {
-    name: 'testnet',
-    endpoint: clusterApiUrl('testnet'),
-    network: ClusterNetwork.Testnet,
-  },
+    name: 'mainnet',
+    endpoint: "https://mainnetbeta-rpc.eclipse.xyz",
+    network: ClusterNetwork.Mainnet,
+  }
 ]
 
 const clusterAtom = atomWithStorage<SolanaCluster>('solana-cluster', defaultClusters[0])
