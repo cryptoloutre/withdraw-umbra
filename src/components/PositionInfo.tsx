@@ -20,8 +20,8 @@ export const PositionInfo: FC<Props> = (prop) => {
     const [positionInfo, setPositionInfo] = useState<{
         address: PublicKey;
         poolID: PublicKey;
-        tickLowerIndex: any;
-        tickUpperIndex: any;
+        tickLowerIndex: number;
+        tickUpperIndex: number;
         liquidity: number;
     }>();
     const [signature, setSignature] = useState<string>("");
@@ -38,8 +38,8 @@ export const PositionInfo: FC<Props> = (prop) => {
     const withdraw = async () => {
         if (wallet.connected && wallet.publicKey) {
             const poolInfo = await getPoolInfo(positionInfo!.poolID, connection);
-            const protocolPosition = await getProtocolPosition(positionInfo!.poolID, positionInfo?.tickLowerIndex, positionInfo?.tickUpperIndex);
-            const tickPDA = await getTickPDA(positionInfo!.poolID, poolInfo.tickSpacing, positionInfo?.tickLowerIndex, positionInfo?.tickUpperIndex);
+            const protocolPosition = await getProtocolPosition(positionInfo!.poolID, positionInfo?.tickLowerIndex!, positionInfo?.tickUpperIndex!);
+            const tickPDA = await getTickPDA(positionInfo!.poolID, poolInfo.tickSpacing, positionInfo?.tickLowerIndex!, positionInfo?.tickUpperIndex!);
 
             let programID0;
             let programID1;

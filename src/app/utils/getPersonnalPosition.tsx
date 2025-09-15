@@ -23,13 +23,13 @@ export async function getPersonnalPositionInfo(mint: PublicKey, connection: Conn
 
     const PersonnalPositionInfo = {
         address: personal,
-        // @ts-ignore
+       // @ts-expect-error
         poolID: new PublicKey(decoded!.pool_id),
-        // @ts-ignore
+        // @ts-expect-error
         tickLowerIndex: decoded!.tick_lower_index,
-        // @ts-ignore
+        // @ts-expect-error
         tickUpperIndex: decoded!.tick_upper_index,
-        // @ts-ignore
+        // @ts-expect-error
         liquidity: decoded!.liquidity
     }
 

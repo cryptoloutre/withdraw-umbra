@@ -14,7 +14,7 @@ import { PositionInfo } from "../PositionInfo";
 export const Withdraw: FC = ({ }) => {
   const wallet = useWallet();
   const connection = new Connection("https://mainnetbeta-rpc.eclipse.xyz");
-  const [connected, setConnected] = useState<Boolean>();
+  const [connected, setConnected] = useState<boolean>();
   const [isFetched, setIsFetched] = useState<boolean>(false);
   const [userNFTs, setUserNFTs] = useState<PublicKey[]>([]);
   const [position, setPosition] = useState<PublicKey>();
