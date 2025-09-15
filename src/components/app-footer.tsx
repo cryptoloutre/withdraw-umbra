@@ -7,7 +7,7 @@ export const Footer: FC = () => {
             <footer className="border-t-2 border-[#141414] bg-black w-screen" >
                 <div className="py-4 flex justify-center">
                     <div className="grid grid-cols-2">
-                        <Link href={"https://github.com/cryptoloutre/solana-tools"} target='_blank' className='flex mx-4'>
+                        <Link href={"https://github.com/cryptoloutre/withdraw-umbra"} target='_blank' className='flex mx-4'>
                             <GithubIcon />
                             <div className='ml-2'>Github</div>
                         </Link>
