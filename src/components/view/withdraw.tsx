@@ -48,7 +48,11 @@ export const Withdraw: FC = ({ }) => {
   return (
     <div className="md:hero mx-auto w-full p-4">
 
-      <div>Use <a>Backpack wallet</a> and connect</div>
+      <div className="text-center text-xl font-bold pb-4">Use <a
+        className="underline"
+        target="_blank"
+        rel="noreferrer"
+        href={`hhttps://backpack.app/`}>Backpack wallet</a> and connect you to the Eclipse Mainnet</div>
       {!connected && <div className="text-center font-bold mt-[5%] text-xl">Please, connect your wallet!</div>}
 
       {connected && !isFetched && <Loader text="Loading positions..." />}
