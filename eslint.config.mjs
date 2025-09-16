@@ -14,7 +14,8 @@ const eslintConfig = [...compat.config(
     extends: ['next/core-web-vitals', 'next/typescript'],
     rules: {
       '@typescript-eslint/no-non-null-assertion': 'off',
-      '@typescript-eslint/ban-ts-comment': 'off'
+      '@typescript-eslint/ban-ts-comment': 'off',
+      '@typescript-eslint/no-non-null-asserted-optional-chain': 'off',
     }
   })]
 
