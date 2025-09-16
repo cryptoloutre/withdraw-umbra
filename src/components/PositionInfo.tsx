@@ -41,22 +41,8 @@ export const PositionInfo: FC<Props> = (prop) => {
             const protocolPosition = await getProtocolPosition(positionInfo!.poolID, positionInfo?.tickLowerIndex!, positionInfo?.tickUpperIndex!);
             const tickPDA = await getTickPDA(positionInfo!.poolID, poolInfo.tickSpacing, positionInfo?.tickLowerIndex!, positionInfo?.tickUpperIndex!);
 
-            let programID0;
-            let programID1;
-
-            if (poolInfo.mint0.toBase58() == "GU7NS9xCwgNPiAdJ69iusFrRfawjDDPjeMBovhV1d4kn") {
-                programID0 = TOKEN_2022_PROGRAM_ID;
-            }
-            else {
-                programID0 = TOKEN_PROGRAM_ID
-            }
-
-            if (poolInfo.mint1.toBase58() == "GU7NS9xCwgNPiAdJ69iusFrRfawjDDPjeMBovhV1d4kn") {
-                programID1 = TOKEN_2022_PROGRAM_ID;
-            }
-            else {
-                programID1 = TOKEN_PROGRAM_ID
-            }
+            const programID0 = (await connection.getAccountInfo(poolInfo.mint0))?.owner;
+            const programID1 = (await connection.getAccountInfo(poolInfo.mint1))?.owner;
 
             const userTokenAccount0 = getAssociatedTokenAddressSync(
                 poolInfo.mint0,
